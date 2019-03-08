@@ -1,0 +1,69 @@
+"NOTES:
+Do not install nuget Swashbuckle.AspNetCore if you are installing SwaggerConfigurationExtension to avoid conflicts.
+
+Set [X] XML Documentation File within csproject (path: select csproject and click properties/build/XML documentation file).
+
+Use in Controllers you do want to version.
+
+[ApiVersion("1.0")]
+[Route("v{version:apiVersion}/[controller]")]
+Use in Controllers you do not want to version. Note: You can use this tag for the Token Generation Controller.
+
+[ApiVersionNeutral]
+[Route("[controller]")]
+Use in EndPoint [Controllers Methods] the verbs HTTP.
+
+[HttpGet]
+[HttpPost]
+[HttpPut]
+[HttpDelete]
+Referencing the project
+
+using Microsoft.AspNetCore.Mvc.Versioning;
+using Swashbuckle.AspNetCore.Swagger;
+using Swashbuckle.SwaggerConfigurationExtension;
+Class: Startup. Method: ConfigureServices(IServiceCollection services).
+
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddMvc(options => { });
+    
+    services.AddApiVersioning(options =>
+    {
+        options.ApiVersionReader = new QueryStringApiVersionReader();
+        options.ApiVersionSelector = new CurrentImplementationApiVersionSelector(options);
+        options.ReportApiVersions = true;
+    });
+
+    string tokenType = null;
+    ApiKeyScheme apiKeyScheme = null;
+    
+    //To use the bearer token, uncomment the encoding below.
+    //tokenType = "Bearer";
+    //apiKeyScheme = new ApiKeyScheme { 
+            //In = "header", 
+            //Description = "Please enter JWT with Bearer into field", 
+            //Name = "Authorization", 
+            //Type = "apiKey" 
+        //};
+        
+    string projectName = "Vasconcellos WebAPI";
+    string projectDescription = "This project has the purpose of performing an exemplification";
+
+    var swaggerConfigurationExtension = new SwaggerStartupConfigureServices(services, tokenType, apiKeyScheme)
+        .SetProjectNameAndDescriptionn(projectName, projectDescription);
+}
+Class: Startup. Method: Configure(IApplicationBuilder app, IHostingEnvironment env).
+
+public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+{
+    app.UseMvc();
+
+    //If you set "withInjectStyleSheet" to true, in "wwwroot" create a folder named "Stateless" and put a custom css file "swaggercustom.css"
+    bool withInjectStyleSheet = true;
+    string relativePathInjectStyleSheet = "../Stateless/swaggercustom.css";
+    string swaggerDocumentationRoute = "Swagger";
+
+    var swaggerStartupConfigure = 
+        new SwaggerStartupConfigure(app, withInjectStyleSheet, swaggerDocumentationRoute, relativePathInjectStyleSheet).RedirectToSwagger();
+}"

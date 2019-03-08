@@ -1,0 +1,10 @@
+C:\Vasconcellos\AWSLambdaCryptography\AWSLambdaCryptography\bin\Release\netcoreapp2.1\AWSLambdaCryptography.deps.json
+C:\Vasconcellos\AWSLambdaCryptography\AWSLambdaCryptography\bin\Release\netcoreapp2.1\AWSLambdaCryptography.runtimeconfig.json
+C:\Vasconcellos\AWSLambdaCryptography\AWSLambdaCryptography\bin\Release\netcoreapp2.1\AWSLambdaCryptography.runtimeconfig.dev.json
+C:\Vasconcellos\AWSLambdaCryptography\AWSLambdaCryptography\bin\Release\netcoreapp2.1\AWSLambdaCryptography.dll
+C:\Vasconcellos\AWSLambdaCryptography\AWSLambdaCryptography\bin\Release\netcoreapp2.1\AWSLambdaCryptography.pdb
+C:\Vasconcellos\AWSLambdaCryptography\AWSLambdaCryptography\obj\Release\netcoreapp2.1\AWSLambdaCryptography.csproj.CoreCompileInputs.cache
+C:\Vasconcellos\AWSLambdaCryptography\AWSLambdaCryptography\obj\Release\netcoreapp2.1\AWSLambdaCryptography.AssemblyInfoInputs.cache
+C:\Vasconcellos\AWSLambdaCryptography\AWSLambdaCryptography\obj\Release\netcoreapp2.1\AWSLambdaCryptography.AssemblyInfo.cs
+C:\Vasconcellos\AWSLambdaCryptography\AWSLambdaCryptography\obj\Release\netcoreapp2.1\AWSLambdaCryptography.dll
+C:\Vasconcellos\AWSLambdaCryptography\AWSLambdaCryptography\obj\Release\netcoreapp2.1\AWSLambdaCryptography.pdb
