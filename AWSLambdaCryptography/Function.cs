@@ -19,9 +19,10 @@ namespace AWSLambdaCryptography
         public dynamic FunctionHandler(Request request, ILambdaContext context)
         {
             if (context == null)
-            {
                 throw new ArgumentNullException(nameof(context));
-            }
+
+            if (request == null || request.Data == null)
+                throw new ArgumentNullException(nameof(request));
 
             var key = CryptographyAES.GenerateKey();
             var iv = CryptographyAES.GenerateIV();
@@ -29,9 +30,9 @@ namespace AWSLambdaCryptography
             var AES = new CryptographyAES(key, iv, bits);
 
             var data = SetTyping(request.Data);
-
             var encrypted = AES.Encrypt(data);
             context.Logger.Log("Encrypted message.");
+
             return new Response(key, iv, (short)bits, encrypted);
         }
 

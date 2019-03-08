@@ -3358,11 +3358,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Vasconcellos\\AWSLambdaCryptography\\AWSLambdaCryptography\\AWSLambdaCryptography.csproj",
+      "projectUniqueName": "C:\\Vasconcellos\\AWS-Lambda-Cryptography-T\\AWSLambdaCryptography\\AWSLambdaCryptography.csproj",
       "projectName": "AWSLambdaCryptography",
-      "projectPath": "C:\\Vasconcellos\\AWSLambdaCryptography\\AWSLambdaCryptography\\AWSLambdaCryptography.csproj",
+      "projectPath": "C:\\Vasconcellos\\AWS-Lambda-Cryptography-T\\AWSLambdaCryptography\\AWSLambdaCryptography.csproj",
       "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-      "outputPath": "C:\\Vasconcellos\\AWSLambdaCryptography\\AWSLambdaCryptography\\obj\\",
+      "outputPath": "C:\\Vasconcellos\\AWS-Lambda-Cryptography-T\\AWSLambdaCryptography\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
